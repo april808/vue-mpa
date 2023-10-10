@@ -7,14 +7,34 @@ module.exports = defineConfig({
   outputDir: "dist" /* 打包生成的文件目錄，預設是 dist */,
   pages: {
     index: {
-      entry: "src/main.js",
+      entry: `src/main.js`,
+      template: `public/index.html`,
       filename:
         "index.html" /* 自定義的文件名，輸出在文件目錄，預設是 index.html */,
+    },
+    list: {
+      entry: `./src/list.js`,
+      template: `src/pages/list.html`,
+      title: "list",
+      filename: `list.html`,
+    },
+    product: {
+      entry: `src/product.js`,
+      template: `src/pages/product.html`,
+      title: "product",
+      filename: `product.html`,
     },
   },
   configureWebpack: {
     externals: {/* 防止 webpack 打包進專案中 */
       jquery: "$",
     },
+    optimization: {/* 禁用代碼壓縮 */
+      minimize: false,
+    },
+    devtool: "eval-source-map", // 不生成源映射文件
+  },
+  css: {
+    sourceMap: true, //在開發環境中啟用來源映射
   },
 });
