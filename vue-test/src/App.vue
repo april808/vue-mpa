@@ -17,7 +17,7 @@ export default {
   components: {
 
   },
-  onMounted() {
+  mounted() {
     // 在 mounted 階段使用 jQuery ($) 確保 DOM 已經渲染完成
     console.log($('img').attr('src'));
   },
