@@ -11,26 +11,28 @@ module.exports = defineConfig({
       template: `public/index.html`,
       filename:
         "index.html" /* 自定義的文件名，輸出在文件目錄，預設是 index.html */,
+      title: "Index Page",
+      chunks: ["chunk-vendors", "chunk-common", "index"],
     },
     list: {
       entry: `./src/list.js`,
       template: `src/pages/list.html`,
-      title: "list",
       filename: `list.html`,
+      title: "list",
     },
     product: {
       entry: `src/product.js`,
       template: `src/pages/product.html`,
-      title: "product",
       filename: `product.html`,
+      title: "product",
     },
   },
   configureWebpack: {
-    externals: {/* 防止 webpack 打包進專案中 */
-      jquery: "$",
+    externals: {
+      /* 防止 webpack 打包進專案中 */ jquery: "$",
     },
-    optimization: {/* 禁用代碼壓縮 */
-      minimize: false,
+    optimization: {
+      /* 禁用代碼壓縮 */ minimize: false,
     },
     devtool: "eval-source-map", // 不生成源映射文件
   },
