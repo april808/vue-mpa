@@ -15,14 +15,14 @@ module.exports = defineConfig({
       chunks: ["chunk-vendors", "chunk-common", "index"],
     },
     list: {
-      entry: `./src/list.js`,
-      template: `src/pages/list.html`,
+      entry: `./src/pages/list/list.js`,
+      template: `src/pages/list/list.html`,
       filename: `list.html`,
       title: "list",
     },
     product: {
-      entry: `src/product.js`,
-      template: `src/pages/product.html`,
+      entry: `src/pages/product/product.js`,
+      template: `src/pages/product/product.html`,
       filename: `product.html`,
       title: "product",
     },
