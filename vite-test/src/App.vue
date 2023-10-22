@@ -13,22 +13,24 @@ const changeName = () => {
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  </div> -->
+  <!-- <HelloWorld msg="Vite + Vue" /> -->
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/bar">bar</router-link> |
+    <router-link to="/table">table</router-link>
     <hr />
-    <img src="https://fakeimg.pl/300x200/200" />
+    <!-- <img src="https://fakeimg.pl/300x200/200" /> -->
   </nav>
-  <h2>{{ num }}</h2>
+  <!-- <h2>{{ num }}</h2>
 
     {{ sampleStore }}
     <hr />
@@ -39,7 +41,7 @@ const changeName = () => {
     <hr />
     {{ sampleStore.changeName(2565) }}
     <hr />
-    {{ sampleStore.name }}
+    {{ sampleStore.name }} -->
   <router-view></router-view>
 </template>
 

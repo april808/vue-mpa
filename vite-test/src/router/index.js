@@ -12,8 +12,17 @@ const routes = [
   {
     path: "/about",
     name: "about",
-    component: () =>
-      import( "../views/AboutView.vue"),
+    component: () => import("../views/AboutView.vue"),
+  },
+  {
+    path: "/bar",
+    name: "bar",
+    component: () => import("../views/Bar.vue"),
+  },
+  {
+    path: "/table",
+    name: "table",
+    component: () => import("../views/Table.vue"),
   },
   {
     path: "/404",
